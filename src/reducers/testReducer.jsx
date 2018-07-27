@@ -1,11 +1,8 @@
-
-
-
-const deviceIdReducer = (state = {
+const testReducer = (state = {
     deviceId: ''
 }, action) => {
     switch (action.type) {
-        case "GET_DEVICE_ID":
+        case "GET_SMT":
             state = {
                 ...state,
                 deviceId: action.payload,
@@ -17,4 +14,4 @@ const deviceIdReducer = (state = {
     return state
 }
 
-export default deviceIdReducer;
+export default testReducer;

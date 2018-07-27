@@ -8,7 +8,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={() => { this.props.getDeviceId() }} >{"get device id"}</button>
+                <button onClick={() => { this.props.getDeviceId(); console.log(this.props) }} >{"get device id"}</button>
                 <div>
                     <p>{'deviceID is: '}{}{this.props.deviceIdReducer.deviceId}</p>
                 </div>
@@ -20,6 +20,7 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
     return {
         deviceIdReducer: state.deviceIdReducer,
+        testReducer: state.testReducer,
     };
 };
 
